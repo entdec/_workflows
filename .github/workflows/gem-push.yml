@@ -37,7 +37,7 @@ jobs:
           OWNER: ${{ github.repository_owner }}
 
       - name: Publish to RubyGems
-        if: ${{ github.event.inputs.public }}
+        if: ${{ inputs.public }}
         run: |
           mkdir -p $HOME/.gem
           touch $HOME/.gem/credentials
